@@ -38,6 +38,7 @@ public class ProblemEngine_Script : MonoBehaviour
     {
         print("fIXED");
         p_Anim.SetTrigger("Done");
+        FindObjectOfType<AudioManager>().Play("Done");
         problem = false;
         i_s.interactable = false;
         i_s.InputOn();

@@ -47,6 +47,8 @@ public class Meteor_Script : MonoBehaviour
     {
         if (size == 2)
         {
+            FindObjectOfType<AudioManager>().Play("Huge Explosion");
+
             for (int i = 0; i < 2; i++)
             {
                 int ranAng = Random.Range(0, 360);
@@ -56,11 +58,18 @@ public class Meteor_Script : MonoBehaviour
 
         if (size == 1)
         {
+            FindObjectOfType<AudioManager>().Play("Small Explosion");
+
             for (int i = 0; i < 4; i++)
             {
                 int ranAng = Random.Range(0, 360);
                 clone = Instantiate(smallMeteor, transform.position, Quaternion.Euler(0, 0, ranAng));
             }
+        }
+
+        if (size == 0)
+        {
+            FindObjectOfType<AudioManager>().Play("Small Explosion");
         }
     }
 

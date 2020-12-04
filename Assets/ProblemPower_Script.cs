@@ -37,6 +37,7 @@ public class ProblemPower_Script : MonoBehaviour
     public void Fixed()
     {
         p_Anim.SetTrigger("Done");
+        FindObjectOfType<AudioManager>().Play("Done");
         problem = false;
         i_s.interactable = false;
         i_s.InputOn();

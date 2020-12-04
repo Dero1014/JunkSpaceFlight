@@ -35,6 +35,7 @@ public class ProblemBattery_Script : MonoBehaviour
     public void Fixed()
     {
         b_Anim.SetTrigger("Done");
+        FindObjectOfType<AudioManager>().Play("Done");
         problem = false;
         i_s.interactable = false;
         i_s.InputOn();

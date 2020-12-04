@@ -17,7 +17,7 @@ public class Switcher_Script : MonoBehaviour
     public void Switch()
     {
         switched = !switched;
-        
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 
 }

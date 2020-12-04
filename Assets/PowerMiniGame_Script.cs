@@ -36,6 +36,7 @@ public class PowerMiniGame_Script : MonoBehaviour
             if (n == 6)
             {
                 fix = true;
+                
                 print("Fixed");
                 pp.Fixed();
             }
